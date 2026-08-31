@@ -1,0 +1,12 @@
+// Parametric polymorphism: `id` is inferred as ∀a. a -> a, then
+// instantiated independently at Int, Bool, and String.
+fn id(x) = x
+fn const(x, y) = x
+
+let n = id(1)
+let flag = id(true)
+let label = id("lumen")
+
+print(n)
+print(flag)
+const(label, id(n))

@@ -1,0 +1,41 @@
+{
+  "name": "lumenlang",
+  "version": "1.0.0",
+  "description": "Lumen is a small functional language with Hindley–Milner type inference and a bytecode VM.",
+  "type": "module",
+  "author": "Glib Miklushys <https://github.com/glibmiklushys>",
+  "license": "MIT",
+  "bin": {
+    "lumen": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "start": "tsx src/cli.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "language",
+    "compiler",
+    "hindley-milner",
+    "type-inference",
+    "bytecode",
+    "vm"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
+  }
+}

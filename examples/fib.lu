@@ -1,0 +1,5 @@
+// Fibonacci via named recursion. The compiler emits CALL/RET against a
+// function table; each invocation gets its own frame and local slots.
+fn fib(n) = if n < 2 then n else fib(n - 1) + fib(n - 2)
+
+fib(10)
